@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+    <link rel="stylesheet" href="/css/countryInfo.css">
+</head>
+<body>
+    <h2><%= countryInfo.name.common %></h2>
+    <div id="country-details">
+        <img src="<%= countryInfo.flags.png %>" width="100" height="60">
+        <p><strong>Capital:</strong> <%= countryInfo.capital %></p>
+        <p><strong>Population:</strong> <%= countryInfo.population %></p>
+        <p><strong>Region:</strong> <%= countryInfo.region %></p>
+        <p><strong>Currencies:</strong> <%= Object.keys(countryInfo.currencies).join(', ') %></p>
+        <p><strong>Languages:</strong> <%= Object.values(countryInfo.languages).join(', ') %></p>
+        <p><strong>Timezones:</strong> <%= countryInfo.timezones.join(', ') %></p>
+    </div>
+</body>
+</html>

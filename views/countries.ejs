@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des Pays</title>
+  <link rel="stylesheet" href="/css/AllCountries.css">
+
+  
+</head>
+<body>
+  <h1>Liste des Pays</h1>
+  <div id="country-list">
+    <% countries.forEach(country => { 
+        if (country.name.official != "State of Israel" ) {%>
+        <div>
+            <img src="<%= country.flags.png %>" width="20" height="15">
+            <a href="/info?name=<%= country.name.official %>">
+                <%= country.name.official %>
+            </a>
+        </div>
+    <% }}); %>
+  </div>
+  <div id="country-details"></div>
+</body>
+</html>
